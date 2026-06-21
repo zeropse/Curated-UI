@@ -60,6 +60,8 @@ const MediaRenderer = memo(({ item, className, debug = false }) => {
         draggable={false}
         fill
         unoptimized={false}
+        priority={true}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className={cn(
           "object-cover border border-border/50 bg-muted/20",
           className,
@@ -481,7 +483,7 @@ const BoxCarousel = forwardRef(
     return (
       <div
         className={cn(
-          "relative focus:outline-0",
+          "relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-xl",
           enableDrag && "cursor-grab active:cursor-grabbing",
           className,
         )}

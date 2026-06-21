@@ -33,7 +33,7 @@ export function SiteCard({ site }) {
           shadow-sm
           transition-all
           duration-500
-          hover:-translate-y-2
+          motion-safe:hover:-translate-y-2
           hover:border-primary/20
           hover:shadow-[0px_16px_48px_rgba(0,0,0,0.06)]
           dark:hover:shadow-none
@@ -59,8 +59,9 @@ export function SiteCard({ site }) {
               alt={site.name}
               fill
               unoptimized={false}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className={cn(
-                "object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105",
+                "object-cover object-top transition-transform duration-700 ease-out motion-safe:group-hover:scale-105",
                 imageLoaded ? "opacity-100" : "opacity-0",
               )}
               onLoad={() => setImageLoaded(true)}
@@ -103,7 +104,7 @@ export function SiteCard({ site }) {
                 group-hover:translate-x-0
               "
             >
-              <IconArrowUpRight size={16} stroke={2.5} />
+              <IconArrowUpRight size={16} stroke={2.5} aria-hidden="true" />
             </div>
           </div>
 

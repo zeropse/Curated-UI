@@ -22,12 +22,12 @@ const features = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative bg-background">
+    <main id="main-content" className="min-h-screen relative bg-background">
       {/* Hero Section */}
       <section className="relative h-[100dvh] flex flex-col items-center justify-between pt-28 pb-8 px-6 md:px-12 max-w-[1400px] mx-auto z-10 overflow-hidden">
         <div className="flex-1 flex flex-col justify-center w-full items-center">
           <Badge className="mb-6 py-1.5 px-4 rounded-full border-primary/20 bg-primary/5 text-primary gap-1.5 animate-fade-in">
-            <IconSparkles size={14} className="text-[#F37338]" />
+            <IconSparkles size={14} className="text-[#F37338]" aria-hidden="true" />
             <span>The Modern UI Directory</span>
           </Badge>
 
@@ -62,7 +62,7 @@ export default function Home() {
             <div className="space-y-6 text-lg md:text-xl text-[#F3F0EE]/80 leading-relaxed">
               <p>
                 We were tired of scouring the web for high-quality, modern
-                components that fit today's design standards.
+                components that fit today&apos;s design standards.
               </p>
 
               <p>
@@ -76,13 +76,14 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full bg-white text-[#141413] hover:bg-[#F3F0EE] transition-all hover:scale-105 px-8 py-6 text-lg font-medium group shadow-xl shadow-white/5"
+                className="rounded-full bg-white text-[#141413] hover:bg-[#F3F0EE] transition-all motion-safe:hover:scale-105 px-8 py-6 text-lg font-medium group shadow-xl shadow-white/5"
               >
                 <Link href="/list">
                   Browse Directory
                   <IconArrowRight
-                    className="ml-2 group-hover:translate-x-1 transition-transform"
+                    className="ml-2 motion-safe:group-hover:translate-x-1 transition-transform"
                     size={20}
+                    aria-hidden="true"
                   />
                 </Link>
               </Button>
@@ -101,7 +102,7 @@ export default function Home() {
                 >
                   <CardHeader>
                     <div className="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center text-[#F37338] mb-2">
-                      <Icon size={24} />
+                      <Icon size={24} aria-hidden="true" />
                     </div>
 
                     <CardTitle className="text-xl font-heading font-medium tracking-tight">

@@ -36,10 +36,16 @@ export function HeroCarousel() {
     <div className="relative w-full max-w-4xl mx-auto flex flex-col items-center justify-center">
       <button
         onClick={toggleDebug}
-        className="absolute -top-12 right-0 p-2 text-muted-foreground hover:text-primary transition-colors"
+        className="absolute -top-12 right-0 p-2 text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-md"
         title={debug ? "Debug Mode: ON" : "Debug Mode: OFF"}
+        aria-label={debug ? "Disable Debug Mode" : "Enable Debug Mode"}
+        aria-pressed={debug}
       >
-        {debug ? <IconBug size={20} /> : <IconBugOff size={20} />}
+        {debug ? (
+          <IconBug size={20} aria-hidden="true" />
+        ) : (
+          <IconBugOff size={20} aria-hidden="true" />
+        )}
       </button>
 
       <div className="flex justify-center shrink-0">

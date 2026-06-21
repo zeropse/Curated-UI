@@ -1,10 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { IconArrowUpRight, IconHelp } from "@tabler/icons-react";
+import {
+  IconHelp,
+  IconPlus,
+  IconEdit,
+  IconBrandGithub,
+  IconBrandX,
+  IconBrandLinkedin,
+  IconShieldLock,
+  IconFileText,
+} from "@tabler/icons-react";
 import Image from "next/image";
 
-const linkClass = "text-sm text-[#F3F0EE] hover:text-white";
+const linkClass =
+  "text-sm text-[#F3F0EE] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm";
 
 const sections = [
   {
@@ -13,7 +23,7 @@ const sections = [
       {
         href: "/faq",
         label: "FAQ",
-        icon: <IconHelp size={16} />,
+        icon: <IconHelp size={16} aria-hidden="true" />,
       },
     ],
   },
@@ -24,10 +34,12 @@ const sections = [
       {
         href: "https://github.com/zeropse/ui-zeropse/issues/new?title=Add%20Site:%20[Site%20Name]&labels=enhancement&body=URL:%0ADescription:",
         label: "Add a Site",
+        icon: <IconPlus size={16} aria-hidden="true" />,
       },
       {
         href: "https://github.com/zeropse/ui-zeropse/issues/new?title=Update%20Site:%20[Site%20Name]&labels=enhancement&body=URL:%0AWhat%20to%20update:",
         label: "Update Listing",
+        icon: <IconEdit size={16} aria-hidden="true" />,
       },
     ],
   },
@@ -37,14 +49,17 @@ const socialLinks = [
   {
     href: "https://github.com/zeropse/ui-zeropse",
     label: "GitHub",
+    icon: <IconBrandGithub size={16} aria-hidden="true" />,
   },
   {
     href: "https://x.com/zer0pse",
     label: "Twitter",
+    icon: <IconBrandX size={16} aria-hidden="true" />,
   },
   {
     href: "https://www.linkedin.com/in/zeropse/",
     label: "LinkedIn",
+    icon: <IconBrandLinkedin size={16} aria-hidden="true" />,
   },
 ];
 
@@ -62,7 +77,7 @@ export function Footer() {
           <div className="space-y-4 md:col-span-1 md:pr-8">
             <Link
               href="/"
-              className="font-heading inline-flex items-center gap-2 text-3xl font-medium tracking-tight"
+              className="font-heading inline-flex items-center gap-2 text-3xl font-medium tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm"
             >
               <Image
                 src="/favicon.ico"
@@ -120,16 +135,24 @@ export function Footer() {
 
             <ul className="space-y-3">
               {[
-                { href: "/privacy", label: "Privacy Policy" },
-                { href: "/terms", label: "Terms of Service" },
+                {
+                  href: "/privacy",
+                  label: "Privacy Policy",
+                  icon: <IconShieldLock size={16} aria-hidden="true" />,
+                },
+                {
+                  href: "/terms",
+                  label: "Terms of Service",
+                  icon: <IconFileText size={16} aria-hidden="true" />,
+                },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className={`${linkClass} flex items-center gap-1 hover:underline`}
+                    className={`${linkClass} flex items-center gap-1.5 hover:underline`}
                   >
+                    {link.icon}
                     {link.label}
-                    <IconArrowUpRight size={14} />
                   </Link>
                 </li>
               ))}
@@ -149,8 +172,9 @@ export function Footer() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#F3F0EE] hover:text-white hover:underline"
+                className="text-sm text-[#F3F0EE] hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm flex items-center gap-1.5"
               >
+                {link.icon}
                 {link.label}
               </Link>
             ))}
