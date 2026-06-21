@@ -24,7 +24,7 @@ export function FloatingNav() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <Button asChild className="rounded-full">
-            <Link href="/list">Explore</Link>
+            <Link href="/explore">Explore</Link>
           </Button>
         </div>
       </nav>

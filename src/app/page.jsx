@@ -82,7 +82,7 @@ export default function Home() {
                 size="lg"
                 className="rounded-full bg-white text-[#141413] hover:bg-[#F3F0EE] transition-all motion-safe:hover:scale-105 px-8 py-6 text-lg font-medium group shadow-xl shadow-white/5"
               >
-                <Link href="/list">
+                <Link href="/explore">
                   Browse Directory
                   <IconArrowRight
                     className="ml-2 motion-safe:group-hover:translate-x-1 transition-transform"

@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { IconLoader } from "@tabler/icons-react";
-import { ListContent } from "./list-content";
+import { ExploreContent } from "./explore-content";
 
-export default function ListPage() {
+export default function ExplorePage() {
   return (
     <main className="min-h-screen relative overflow-hidden py-32">
       <Suspense
@@ -15,7 +15,7 @@ export default function ListPage() {
           </div>
         }
       >
-        <ListContent />
+        <ExploreContent />
       </Suspense>
     </main>
   );
