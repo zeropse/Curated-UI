@@ -84,7 +84,7 @@ export function ListContent() {
                 TableRow: (props) => (
                   <TableRow
                     {...props}
-                    className="border-border/40 transition-colors hover:bg-muted/50"
+                    className="border-border/40 transition-colors hover:bg-muted/50 animate-in fade-in duration-300 ease-out"
                   />
                 ),
                 TableBody: (props) => <TableBody {...props} />,

@@ -1,10 +1,11 @@
 export const categories = [
   "All",
   "UI Components",
-  "Design Systems",
-  "Resources & Tools",
-  "Typography",
-  "Animation",
+  "Templates & Blocks",
+  "Tools & Utilities",
   "Inspiration",
-  "Media",
+  "Typography & Colors",
+  "Icons & Illustrations",
+  "Media & Sounds",
+  "Animations",
 ];
