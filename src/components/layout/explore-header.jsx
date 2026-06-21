@@ -2,7 +2,7 @@
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { categories } from "@/content/data";
+import { categories } from "@/data/categories";
 import { useQueryState } from "nuqs";
 import {
   IconSearch,

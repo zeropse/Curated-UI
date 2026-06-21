@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import puppeteer from "puppeteer";
-import { sites } from "../src/content/data.js";
+import { sites } from "../src/data/sites.js";
 
 const OUT_DIR = path.join(process.cwd(), "public", "images");
 

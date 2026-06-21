@@ -120,3 +120,23 @@ export function SiteCard({ site }) {
     </Link>
   );
 }
+
+export function SiteCardSkeleton() {
+  return (
+    <Card className="h-full w-full max-w-[400px] p-2.5 border border-border/40 bg-background shadow-sm flex flex-col">
+      <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-muted/30">
+        <Skeleton className="absolute inset-0 h-full w-full" />
+      </div>
+      <CardContent className="px-4 py-5 flex flex-col gap-3 flex-grow border-0">
+        <div className="flex items-start justify-between gap-4 w-full">
+          <Skeleton className="h-8 w-2/3" />
+          <Skeleton className="size-8 rounded-full" />
+        </div>
+        <div className="flex flex-col gap-2 mt-2">
+          <Skeleton className="h-4 w-full" />
+          <Skeleton className="h-4 w-4/5" />
+        </div>
+      </CardContent>
+    </Card>
+  );
+}

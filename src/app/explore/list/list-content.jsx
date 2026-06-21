@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { sites } from "@/content/data";
+import { sites } from "@/data/sites";
 import { useQueryState } from "nuqs";
 import { IconExternalLink } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";

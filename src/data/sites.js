@@ -1,14 +1,3 @@
-export const categories = [
-  "All",
-  "UI Components",
-  "Design Systems",
-  "Resources & Tools",
-  "Typography",
-  "Animation",
-  "Inspiration",
-  "Media",
-];
-
 export const sites = [
   {
     name: "Shadcn UI",

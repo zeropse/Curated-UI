@@ -1,7 +1,7 @@
 "use client";
 
 import { SiteCard } from "@/components/ui/site-card";
-import { sites } from "@/content/data";
+import { sites } from "@/data/sites";
 import { useQueryState } from "nuqs";
 import { ExploreHeader } from "@/components/layout/explore-header";
 
