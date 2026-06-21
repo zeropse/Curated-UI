@@ -1,9 +1,11 @@
 "use client";
 
+import React from "react";
 import { SiteCard } from "@/components/site-card";
 import { sites } from "@/data/sites";
 import { useQueryState } from "nuqs";
 import { ExploreHeader } from "@/components/layout/explore-header";
+import { VirtuosoGrid } from "react-virtuoso";
 import {
   Empty,
   EmptyHeader,
@@ -53,11 +55,32 @@ export function ExploreContent() {
             </EmptyHeader>
           </Empty>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-x-12 md:gap-y-16 justify-items-center">
-            {filteredSites.map((site) => (
-              <SiteCard key={site.url} site={site} />
-            ))}
-          </div>
+          <VirtuosoGrid
+            useWindowScroll
+            data={filteredSites}
+            components={{
+              List: React.forwardRef(({ style, children, ...props }, ref) => (
+                <div
+                  ref={ref}
+                  {...props}
+                  style={style}
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-x-12 md:gap-y-16 justify-items-center"
+                >
+                  {children}
+                </div>
+              )),
+              Item: React.forwardRef(({ children, ...props }, ref) => (
+                <div
+                  {...props}
+                  ref={ref}
+                  className="w-full max-w-[400px] flex justify-center"
+                >
+                  {children}
+                </div>
+              )),
+            }}
+            itemContent={(_index, site) => <SiteCard site={site} />}
+          />
         )}
       </section>
     </>

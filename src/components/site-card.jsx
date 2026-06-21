@@ -22,7 +22,7 @@ export function SiteCard({ site }) {
       href={site.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block w-full max-w-[400px] h-full"
+      className="group block w-full h-full"
     >
       <Card
         className="
@@ -130,7 +130,6 @@ export function SiteCardSkeleton() {
       <CardContent className="px-4 py-5 flex flex-col gap-3 flex-grow border-0">
         <div className="flex items-start justify-between gap-4 w-full">
           <Skeleton className="h-8 w-2/3" />
-          <Skeleton className="size-8 rounded-full" />
         </div>
         <div className="flex flex-col gap-2 mt-2">
           <Skeleton className="h-4 w-full" />
