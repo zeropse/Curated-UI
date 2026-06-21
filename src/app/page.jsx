@@ -29,7 +29,7 @@ export default function Home() {
           <Badge className="mb-6 p-3 rounded-full border-primary/20 bg-primary/5 text-primary gap-1.5 animate-fade-in">
             <IconSparkles
               size={14}
-              className="text-[#F37338]"
+              className="text-orange-500"
               aria-hidden="true"
             />
             <span>Modern UI Directory</span>
@@ -54,16 +54,16 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="py-24 md:py-32 px-6 md:px-16 bg-[#141413] text-white rounded-[40px] md:rounded-[80px] mt-12 mb-12 max-w-[1400px] mx-auto relative z-20"
+        className="py-24 md:py-32 px-6 md:px-16 bg-neutral-950 text-white rounded-[40px] md:rounded-[80px] mt-12 mb-12 max-w-[1400px] mx-auto relative z-20"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Content */}
           <div className="flex flex-col gap-8">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">
-              Why Curated<span className="text-[#F37338]"> UI</span> exists.
+              Why Curated<span className="text-orange-500"> UI</span> exists.
             </h2>
 
-            <div className="flex flex-col gap-6 text-lg md:text-xl text-[#F3F0EE]/80 leading-relaxed">
+            <div className="flex flex-col gap-6 text-lg md:text-xl text-stone-100/80 leading-relaxed">
               <p>
                 We were tired of scouring the web for high-quality, modern
                 components that fit today&apos;s design standards.
@@ -80,7 +80,7 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full bg-white text-[#141413] hover:bg-[#F3F0EE] transition-all motion-safe:hover:scale-105 px-8 py-6 text-lg font-medium group shadow-xl shadow-white/5"
+                className="rounded-full bg-white text-neutral-950 hover:bg-stone-100 transition-all motion-safe:hover:scale-105 px-8 py-6 text-lg font-medium group shadow-xl shadow-white/5"
               >
                 <Link href="/explore">
                   Browse Directory
@@ -105,7 +105,7 @@ export default function Home() {
                   className="bg-white/5 border-white/10 p-4 rounded-4xl text-white hover:bg-white/10 transition-colors duration-300 shadow-none"
                 >
                   <CardHeader>
-                    <div className="size-12 bg-white/10 rounded-full flex items-center justify-center text-[#F37338] mb-2">
+                    <div className="size-12 bg-white/10 rounded-full flex items-center justify-center text-orange-500 mb-2">
                       <Icon size={24} aria-hidden="true" />
                     </div>
 
@@ -115,7 +115,7 @@ export default function Home() {
                   </CardHeader>
 
                   <CardContent>
-                    <p className="text-[#F3F0EE]/70 text-sm leading-relaxed">
+                    <p className="text-stone-100/70 text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   </CardContent>

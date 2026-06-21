@@ -49,6 +49,7 @@ export function ExploreHeader() {
               name="search"
               type="text"
               placeholder="Search for UI, libraries, fonts…"
+              aria-label="Search directory"
               value={searchQuery || ""}
               onChange={(e) => setSearchQuery(e.target.value || null)}
               className="w-full pl-14 pr-14 py-4 rounded-full border border-primary/20 bg-background text-lg text-primary placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-primary/20 transition-all shadow-sm"
@@ -71,14 +72,14 @@ export function ExploreHeader() {
                 <TabsList className="flex flex-nowrap justify-start md:justify-center gap-1.5 md:gap-2 bg-transparent h-auto p-0 w-max mx-auto">
                   <TabsTrigger
                     value="grid"
-                    className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap"
+                    className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   >
                     <IconLayoutGrid size={18} />
                     Grid
                   </TabsTrigger>
                   <TabsTrigger
                     value="list"
-                    className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap"
+                    className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   >
                     <IconList size={18} />
                     List
@@ -100,7 +101,7 @@ export function ExploreHeader() {
                   <TabsTrigger
                     key={category}
                     value={category}
-                    className="px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap"
+                    className="px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   >
                     {category}
                   </TabsTrigger>

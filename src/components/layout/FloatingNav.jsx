@@ -18,7 +18,7 @@ export function FloatingNav() {
             height={20}
             className="rounded-sm"
           />
-          Curated<span className="text-[#F37338]"> UI</span>
+          Curated<span className="text-orange-500"> UI</span>
         </Link>
 
         <div className="flex items-center gap-2">

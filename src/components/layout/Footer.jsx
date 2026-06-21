@@ -14,7 +14,7 @@ import {
 import Image from "next/image";
 
 const linkClass =
-  "text-sm text-[#F3F0EE] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm";
+  "text-sm text-stone-100 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm";
 
 const sections = [
   {
@@ -61,7 +61,7 @@ const year = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="mt-32 rounded-t-[40px] bg-[#141413] px-6 pt-24 pb-12 text-white md:rounded-t-[80px] md:px-12">
+    <footer className="mt-32 rounded-t-[40px] bg-neutral-950 px-6 pt-24 pb-12 text-white md:rounded-t-[80px] md:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 grid grid-cols-2 gap-12 md:grid-cols-4">
           <div className="flex flex-col items-center text-center gap-4 md:items-start md:text-left col-span-2 md:col-span-2 md:pr-8">
@@ -77,11 +77,11 @@ export function Footer() {
                 className="rounded-sm"
               />
               <span>
-                Curated<span className="text-[#F37338]"> UI</span>
+                Curated<span className="text-orange-500"> UI</span>
               </span>
             </Link>
 
-            <p className="text-sm leading-relaxed text-[#696969]">
+            <p className="text-sm leading-relaxed text-neutral-500">
               A carefully curated collection of modern UI libraries, design
               systems, and typography inspiration. Everything you need to build
               beautiful interfaces.
@@ -90,7 +90,7 @@ export function Footer() {
 
           {sections.map((section) => (
             <div key={section.title} className="flex flex-col gap-4">
-              <h3 className="text-xs font-bold uppercase tracking-widest text-[#696969]">
+              <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-500">
                 {section.title}
               </h3>
 
@@ -119,7 +119,7 @@ export function Footer() {
           ))}
 
           <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-bold uppercase tracking-widest text-[#696969]">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-500">
               Legal
             </h3>
 
@@ -151,7 +151,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/20 pt-8 md:flex-row">
-          <p className="text-sm text-[#F3F0EE]">
+          <p className="text-sm text-stone-100">
             © {year} Curated UI. All rights reserved.
           </p>
 
@@ -162,7 +162,7 @@ export function Footer() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#F3F0EE] hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm flex items-center gap-1.5"
+                className="text-sm text-stone-100 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm flex items-center gap-1.5"
               >
                 {link.icon}
                 {link.label}

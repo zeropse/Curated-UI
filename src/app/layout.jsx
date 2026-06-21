@@ -1,7 +1,7 @@
 import { Inter, Inter_Tight } from "next/font/google";
 
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme/theme-provicer";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 import { cn } from "@/lib/utils";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Footer } from "@/components/layout/Footer";

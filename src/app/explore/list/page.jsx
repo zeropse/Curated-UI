@@ -2,6 +2,12 @@ import { Suspense } from "react";
 import { IconLoader } from "@tabler/icons-react";
 import { ListContent } from "./list-content";
 
+export const metadata = {
+  title: "Explore List",
+  description:
+    "Browse the curated directory of modern UI tools and libraries in a list format.",
+};
+
 export default function ExploreListPage() {
   return (
     <main className="min-h-screen relative overflow-hidden py-32">
