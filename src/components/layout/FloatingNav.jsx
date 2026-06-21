@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ThemeToggle } from "../ThemeToggle";
 import { Button } from "@/components/ui/button";
+import { IconCompass } from "@tabler/icons-react";
 
 export function FloatingNav() {
   return (
@@ -23,8 +24,11 @@ export function FloatingNav() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button asChild className="rounded-full">
-            <Link href="/explore">Explore</Link>
+          <Button asChild className="roundel-full">
+            <Link href="/explore">
+              <IconCompass size={18} />
+              Explore
+            </Link>
           </Button>
         </div>
       </nav>

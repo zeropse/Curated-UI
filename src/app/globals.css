@@ -48,15 +48,15 @@
 }
 
 :root {
-  --background: #F3F0EE;
+  --background: #f3f0ee;
   --foreground: #141413;
-  --card: #FCFBFA;
+  --card: #fcfbfa;
   --card-foreground: #141413;
-  --popover: #FCFBFA;
+  --popover: #fcfbfa;
   --popover-foreground: #141413;
   --primary: #141413;
-  --primary-foreground: #F3F0EE;
-  --secondary: #FFFFFF;
+  --primary-foreground: #f3f0ee;
+  --secondary: #ffffff;
   --secondary-foreground: #141413;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -84,34 +84,32 @@
 
 .dark {
   --background: #141413;
-  --foreground: #F3F0EE;
+  --foreground: #f3f0ee;
   --card: #262627;
-  --card-foreground: #F3F0EE;
+  --card-foreground: #f3f0ee;
   --popover: #262627;
-  --popover-foreground: #F3F0EE;
-  --primary: #F3F0EE;
+  --popover-foreground: #f3f0ee;
+  --primary: #f3f0ee;
   --primary-foreground: #141413;
   --secondary: #141413;
-  --secondary-foreground: #F3F0EE;
+  --secondary-foreground: #f3f0ee;
   --muted: #262627;
   --muted-foreground: #696969;
   --accent: #262627;
-  --accent-foreground: #F3F0EE;
+  --accent-foreground: #f3f0ee;
   --destructive: oklch(0.704 0.191 22.216);
   --border: rgba(243, 240, 238, 0.1);
   --input: rgba(243, 240, 238, 0.15);
   --ring: oklch(0.556 0 0);
   --sidebar: #141413;
-  --sidebar-foreground: #F3F0EE;
-  --sidebar-primary: #F3F0EE;
+  --sidebar-foreground: #f3f0ee;
+  --sidebar-primary: #f3f0ee;
   --sidebar-primary-foreground: #141413;
   --sidebar-accent: #262627;
-  --sidebar-accent-foreground: #F3F0EE;
+  --sidebar-accent-foreground: #f3f0ee;
   --sidebar-border: rgba(243, 240, 238, 0.1);
   --sidebar-ring: oklch(0.556 0 0);
 }
-
-
 
 @layer base {
   * {
@@ -120,7 +118,12 @@
   body {
     @apply bg-background text-foreground font-sans font-[450];
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply tracking-[-0.02em] font-medium;
   }
   button:not(:disabled),
@@ -130,4 +133,10 @@
   html {
     @apply font-sans;
   }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
