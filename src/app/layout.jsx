@@ -42,12 +42,21 @@ export const metadata = {
     description:
       "A curated collection of modern UI libraries, fonts, design systems, and inspiration for developers and designers.",
     siteName: "Curated UI",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Curated UI",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Curated UI - All-in-One Design & UI Resources",
     description:
       "A curated collection of modern UI libraries, fonts, design systems, and inspiration for developers and designers.",
+    images: ["/og-image.png"],
   },
 };
 
