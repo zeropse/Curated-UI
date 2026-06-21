@@ -1,5 +1,3 @@
-import { FloatingNav } from "@/components/FloatingNav";
-import { Footer } from "@/components/Footer";
 import {
   Accordion,
   AccordionContent,
@@ -13,63 +11,74 @@ export const metadata = {
 };
 
 export default function FAQPage() {
+  const faqs = [
+    {
+      question: "What is Dir. and who is it for?",
+      answer:
+        "Dir. is a meticulously curated directory of modern UI components, libraries, design systems, and web tools. It is built for developers and designers who want to stop endlessly bookmarking scattered resources and start building exceptional products faster.",
+    },
+    {
+      question: "How do you select the libraries that get listed?",
+      answer:
+        "We have strict curation standards. Every resource is manually tested to ensure it meets modern design aesthetics, has good documentation, is actively maintained, and provides genuine value to the web development community.",
+    },
+    {
+      question: "How can I submit my own library or tool?",
+      answer:
+        "We welcome community submissions! You can submit a new site by opening an issue on our GitHub repository. Please ensure your submission meets our quality guidelines before submitting.",
+    },
+    {
+      question: "Is this directory free to use?",
+      answer:
+        "Yes, Dir. is completely free and open-source. We believe in keeping high-quality design resources accessible to everyone.",
+    },
+    {
+      question: "How often do you add new resources?",
+      answer:
+        "We update the directory on a weekly basis, adding newly discovered gems and reviewing community submissions.",
+    },
+    {
+      question: "Do you rank or sponsor specific libraries?",
+      answer:
+        "No. All resources are curated based on merit and quality. We do not accept paid placements to ensure the integrity of our curation.",
+    },
+  ];
+
   return (
-    <main className="min-h-screen bg-background flex flex-col">
-      <FloatingNav />
-      <div className="flex-grow pt-40 pb-24 px-6 md:px-12 max-w-3xl mx-auto w-full">
-        <h1 className="font-heading text-4xl md:text-5xl font-medium tracking-tight mb-4">
-          Frequently Asked Questions
-        </h1>
-        <p className="text-muted-foreground mb-12 text-lg">
-          Everything you need to know about the directory and how it works.
-        </p>
+    <main className="min-h-screen bg-background flex flex-col relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/5 to-transparent -z-10" />
 
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="text-left font-medium text-lg">
-              How do I submit a new site to the directory?
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground leading-relaxed">
-              You can submit a new site by clicking the "Add a Site" link in the
-              footer. It will redirect you to our GitHub repository where you
-              can open an issue with the required details.
-            </AccordionContent>
-          </AccordionItem>
+      <div className="flex-grow pt-32 md:pt-40 pb-32 px-6 md:px-12 max-w-4xl mx-auto w-full z-10">
+        <div className="text-center mb-16">
+          <h1 className="font-heading text-5xl md:text-6xl font-medium tracking-tight mb-6 text-primary">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Everything you need to know about how we curate, update, and manage
+            the directory.
+          </p>
+        </div>
 
-          <AccordionItem value="item-2">
-            <AccordionTrigger className="text-left font-medium text-lg">
-              Is it free to be listed?
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground leading-relaxed">
-              Yes! We believe in keeping this resource completely free and open
-              for the community.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-3">
-            <AccordionTrigger className="text-left font-medium text-lg">
-              How do you choose which sites get listed?
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground leading-relaxed">
-              We look for high-quality, modern design resources that provide
-              significant value to developers and designers. We prioritize
-              active projects with good documentation and clean aesthetics.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-4">
-            <AccordionTrigger className="text-left font-medium text-lg">
-              How often is the directory updated?
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground leading-relaxed">
-              The directory is updated regularly as new submissions come in
-              through our GitHub issues pipeline. We try to review and merge new
-              additions weekly.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+        <div className="bg-white/5 border border-white/10 rounded-[32px] p-6 md:p-12 shadow-xl shadow-black/5">
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border-b border-border/50 last:border-0 py-2"
+              >
+                <AccordionTrigger className="text-left font-heading font-medium text-lg md:text-xl hover:text-primary/80 transition-colors">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-base md:text-lg leading-relaxed pt-2 pb-6">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
-      <Footer />
     </main>
   );
 }

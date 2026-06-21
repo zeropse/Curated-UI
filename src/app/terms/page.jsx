@@ -1,60 +1,76 @@
-import { FloatingNav } from "@/components/FloatingNav";
-import { Footer } from "@/components/Footer";
-
 export const metadata = {
   title: "Terms of Service - UI Directory",
   description: "Terms of Service for UI Directory",
 };
 
+const termsSections = [
+  {
+    title: "1. Agreement to Terms",
+    content:
+      'By accessing or using Dir. (the "Directory"), you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access the service.',
+  },
+  {
+    title: "2. Use of the Directory",
+    content:
+      "Dir. is provided as a free, curated resource for developers and designers. You may use the directory to discover, explore, and navigate to third-party tools and libraries. You agree not to use the directory for any unlawful purpose or in any way that could damage, disable, or impair the service.",
+  },
+  {
+    title: "3. Intellectual Property",
+    content:
+      "The curation, layout, design, and original content of Dir. are protected by intellectual property rights. However, all third-party logos, trademarks, library names, and website screenshots belong to their respective owners. We do not claim ownership over the external resources we link to.",
+  },
+  {
+    title: "4. Disclaimer of Warranties",
+    content:
+      'The directory is provided on an "AS IS" and "AS AVAILABLE" basis. We make no representations or warranties of any kind, express or implied, regarding the accuracy, reliability, or completeness of the curation. We do not endorse or guarantee the quality of any third-party tool listed.',
+  },
+  {
+    title: "5. Limitation of Liability",
+    content:
+      "In no event shall Dir., its creators, or contributors be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the directory, or from any third-party tools you discover through the directory.",
+  },
+  {
+    title: "6. Changes to Terms",
+    content:
+      "We reserve the right to modify or replace these Terms at any time. We will provide notice of significant changes by updating the date at the top of this page. Your continued use of the directory after such modifications constitutes acceptance of the new terms.",
+  },
+];
+
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-background flex flex-col">
-      <FloatingNav />
-      <div className="flex-grow pt-40 pb-24 px-6 md:px-12 max-w-3xl mx-auto w-full prose dark:prose-invert">
-        <h1 className="font-heading text-4xl md:text-5xl font-medium tracking-tight mb-8">
-          Terms of Service
-        </h1>
-        <p className="text-muted-foreground text-sm mb-12">
-          Last updated: {new Date().toLocaleDateString()}
-        </p>
+    <main className="min-h-screen bg-background flex flex-col relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/5 to-transparent -z-10" />
 
-        <h2 className="text-2xl font-medium mt-8 mb-4">
-          1. Acceptance of Terms
-        </h2>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
-          By accessing and using this website, you accept and agree to be bound
-          by the terms and provision of this agreement.
-        </p>
+      <div className="flex-grow pt-32 md:pt-40 pb-32 px-6 md:px-12 max-w-4xl mx-auto w-full z-10">
+        <div className="mb-16 text-center">
+          <h1 className="font-heading text-5xl md:text-6xl font-medium tracking-tight mb-6 text-primary">
+            Terms of Service
+          </h1>
 
-        <h2 className="text-2xl font-medium mt-8 mb-4">
-          2. Description of Service
-        </h2>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
-          UI Directory provides a curated list of links to external design and
-          development resources. We do not host or own the resources linked on
-          our platform unless explicitly stated.
-        </p>
+          <p className="text-muted-foreground text-lg mb-2">
+            Effective Date:{" "}
+            {new Date().toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            })}
+          </p>
+        </div>
 
-        <h2 className="text-2xl font-medium mt-8 mb-4">
-          3. External Links Disclaimer
-        </h2>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
-          Our website contains links to external websites that are not provided
-          or maintained by or in any way affiliated with UI Directory. Please
-          note that we do not guarantee the accuracy, relevance, timeliness, or
-          completeness of any information on these external websites.
-        </p>
+        <div className="bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-16 shadow-xl shadow-black/5 space-y-12">
+          {termsSections.map((section) => (
+            <section key={section.title} className="space-y-4">
+              <h2 className="font-heading text-3xl font-medium tracking-tight text-primary">
+                {section.title}
+              </h2>
 
-        <h2 className="text-2xl font-medium mt-8 mb-4">
-          4. Intellectual Property
-        </h2>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
-          The curated collection, site design, and original content are the
-          property of UI Directory. The trademarks, logos, and service marks of
-          the linked resources belong to their respective owners.
-        </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                {section.content}
+              </p>
+            </section>
+          ))}
+        </div>
       </div>
-      <Footer />
     </main>
   );
 }

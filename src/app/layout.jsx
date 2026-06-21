@@ -4,8 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provicer";
 import { cn } from "@/lib/utils";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
-import { Footer } from "@/components/Footer";
-import { FloatingNav } from "@/components/FloatingNav";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingNav } from "@/components/layout/FloatingNav";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const interTight = Inter_Tight({

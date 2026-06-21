@@ -1,57 +1,102 @@
-import { FloatingNav } from "@/components/FloatingNav";
-import { Footer } from "@/components/Footer";
-
 export const metadata = {
   title: "Privacy Policy - UI Directory",
   description: "Privacy Policy for UI Directory",
 };
 
+const privacySections = [
+  {
+    title: "1. Introduction",
+    content: (
+      <>
+        Welcome to Dir. ("we," "our," or "us"). We respect your privacy and are
+        deeply committed to protecting it. This Privacy Policy explains our
+        practices regarding the collection, use, and disclosure of information
+        that you may provide via our directory.
+      </>
+    ),
+  },
+  {
+    title: "2. The Data We Collect",
+    content: (
+      <>
+        We believe in data minimization. We do <strong>not</strong> track,
+        collect, or store any personally identifiable information from our
+        visitors. We use simple, privacy-respecting analytics (which do not use
+        cookies or collect IP addresses) solely to understand overall website
+        traffic and usage patterns.
+      </>
+    ),
+  },
+  {
+    title: "3. Third-Party Links & External Sites",
+    content: (
+      <>
+        Our core service is providing links to third-party tools, libraries, and
+        design systems. When you click on these links, you will be directed to
+        that third party&apos;s site. We strongly advise you to review the
+        Privacy Policy of every site you visit. We have no control over and
+        assume no responsibility for the content, privacy policies, or practices
+        of any third-party sites or services.
+      </>
+    ),
+  },
+  {
+    title: "4. Data Security",
+    content: (
+      <>
+        While we do not collect personal data, we still prioritize the security
+        of our platform. We use commercially acceptable means to protect our
+        website and ensure it remains a safe directory for all users.
+      </>
+    ),
+  },
+  {
+    title: "5. Changes to This Privacy Policy",
+    content: (
+      <>
+        We may update our Privacy Policy from time to time. Any changes will be
+        posted on this page with an updated "Effective Date." We encourage you
+        to review this Privacy Policy periodically for any changes.
+      </>
+    ),
+  },
+];
+
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen bg-background flex flex-col">
-      <FloatingNav />
-      <div className="flex-grow pt-40 pb-24 px-6 md:px-12 max-w-3xl mx-auto w-full prose dark:prose-invert">
-        <h1 className="font-heading text-4xl md:text-5xl font-medium tracking-tight mb-8">
-          Privacy Policy
-        </h1>
-        <p className="text-muted-foreground text-sm mb-12">
-          Last updated: {new Date().toLocaleDateString()}
-        </p>
+    <main className="min-h-screen bg-background flex flex-col relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/5 to-transparent -z-10" />
 
-        <h2 className="text-2xl font-medium mt-8 mb-4">1. Introduction</h2>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
-          Welcome to UI Directory. We respect your privacy and are committed to
-          protecting your personal data. This privacy policy will inform you as
-          to how we look after your personal data when you visit our website.
-        </p>
+      <div className="flex-grow pt-32 md:pt-40 pb-32 px-6 md:px-12 max-w-4xl mx-auto w-full z-10">
+        <div className="mb-16 text-center">
+          <h1 className="font-heading text-5xl md:text-6xl font-medium tracking-tight mb-6 text-primary">
+            Privacy Policy
+          </h1>
 
-        <h2 className="text-2xl font-medium mt-8 mb-4">
-          2. The data we collect
-        </h2>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
-          We do not track, collect, or store any personally identifiable
-          information from our visitors. We use simple privacy-respecting
-          analytics to understand overall website traffic and usage patterns.
-        </p>
+          <p className="text-muted-foreground text-lg mb-2">
+            Effective Date:{" "}
+            {new Date().toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            })}
+          </p>
+        </div>
 
-        <h2 className="text-2xl font-medium mt-8 mb-4">3. Third-party links</h2>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
-          This website includes links to third-party websites, plug-ins, and
-          applications. Clicking on those links or enabling those connections
-          may allow third parties to collect or share data about you. We do not
-          control these third-party websites and are not responsible for their
-          privacy statements.
-        </p>
+        <div className="bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-16 shadow-xl shadow-black/5 space-y-12">
+          {privacySections.map((section) => (
+            <section key={section.title} className="space-y-4">
+              <h2 className="font-heading text-3xl font-medium tracking-tight text-primary">
+                {section.title}
+              </h2>
 
-        <h2 className="text-2xl font-medium mt-8 mb-4">
-          4. Changes to the privacy policy
-        </h2>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
-          We keep our privacy policy under regular review. We will place any
-          updates on this webpage.
-        </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                {section.content}
+              </p>
+            </section>
+          ))}
+        </div>
       </div>
-      <Footer />
     </main>
   );
 }
