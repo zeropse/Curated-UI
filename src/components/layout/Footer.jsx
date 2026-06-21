@@ -41,7 +41,7 @@ const contributeLinks = [
 const socialLinks = [
   {
     name: "GitHub",
-    href: "https://github.com/zeropse/ui-zeropse",
+    href: "https://github.com/zeropse/Curated-UI",
     icon: IconBrandGithub,
   },
   { name: "Twitter", href: "https://x.com/zer0pse", icon: IconBrandX },
