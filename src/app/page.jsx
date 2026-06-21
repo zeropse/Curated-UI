@@ -54,7 +54,7 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="py-24 md:py-32 px-6 md:px-16 bg-neutral-950 text-white rounded-4xl mt-12 mb-12 max-w-[1400px] mx-auto relative z-20"
+        className="py-24 md:py-32 px-6 md:px-16 bg-neutral-950 text-white rounded-4xl md:rounded-[5rem] mt-12 mb-12 max-w-[1400px] mx-auto relative z-20"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Content */}

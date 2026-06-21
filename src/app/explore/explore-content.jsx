@@ -24,19 +24,20 @@ export function ExploreContent() {
     defaultValue: "",
   });
 
-  let filteredSites =
-    activeCategory === "All"
-      ? sites
-      : sites.filter((site) => site.category === activeCategory);
+  const q = searchQuery?.toLowerCase();
+  const filteredSites = sites.filter((site) => {
+    const matchesCategory =
+      activeCategory === "All" || site.category === activeCategory;
+    if (!matchesCategory) return false;
 
-  if (searchQuery) {
-    const q = searchQuery.toLowerCase();
-    filteredSites = filteredSites.filter(
-      (site) =>
+    if (q) {
+      return (
         site.name.toLowerCase().includes(q) ||
-        site.description.toLowerCase().includes(q),
-    );
-  }
+        site.description.toLowerCase().includes(q)
+      );
+    }
+    return true;
+  });
 
   return (
     <>

@@ -13,13 +13,14 @@ import {
   IconX,
 } from "@tabler/icons-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useTransition } from "react";
 
 export function ExploreHeader() {
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
   const inputRef = useRef(null);
+  const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -41,7 +42,9 @@ export function ExploreHeader() {
     const newPath = newView === "list" ? "/explore/list" : "/explore";
     const currentSearch = searchParams.toString();
     const query = currentSearch ? `?${currentSearch}` : "";
-    router.push(`${newPath}${query}`, { scroll: false });
+    startTransition(() => {
+      router.push(`${newPath}${query}`, { scroll: false });
+    });
   };
 
   const [activeCategory, setActiveCategory] = useQueryState("category", {
