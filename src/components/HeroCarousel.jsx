@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BoxCarousel from "@/components/ui/box-carousel";
 import useScreenSize from "@/hooks/use-screen-size";
 import { sites } from "@/content/data";
 import { getSiteImageSrc } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 /* import { IconBug, IconBugOff } from "@tabler/icons-react"; */
 
 const carouselItems = sites.map((site, index) => ({
@@ -17,7 +18,12 @@ const carouselItems = sites.map((site, index) => ({
 export function HeroCarousel() {
   const carouselRef = useRef(null);
   const [debug, setDebug] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const screenSize = useScreenSize();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const getCarouselDimensions = () => {
     if (screenSize.lessThan("md")) {
@@ -33,8 +39,21 @@ export function HeroCarousel() {
 
   const toggleDebug = () => setDebug(!debug);
 
+  // Return a skeleton of the max expected size to prevent layout shift during SSR/hydration.
+  // The actual dimensions are fixed inside the layout, so the flex container handles centering.
+  if (!isMounted) {
+    return (
+      <div className="w-full max-w-4xl mx-auto flex items-center justify-center min-h-[400px]">
+        <Skeleton
+          style={{ width: 640, height: 400 }}
+          className="rounded-xl bg-muted/20"
+        />
+      </div>
+    );
+  }
+
   return (
-    <div className="relative w-full max-w-4xl mx-auto flex flex-col items-center justify-center">
+    <div className="relative w-full max-w-4xl mx-auto flex flex-col items-center justify-center min-h-[400px]">
       {/* <button
         onClick={toggleDebug}
         className="absolute -top-12 right-0 p-2 text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-md"

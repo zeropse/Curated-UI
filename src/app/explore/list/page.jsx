@@ -10,7 +10,10 @@ export const metadata = {
 
 export default function ExploreListPage() {
   return (
-    <main className="min-h-screen relative overflow-hidden py-32">
+    <main
+      id="main-content"
+      className="min-h-screen relative overflow-hidden py-32"
+    >
       <Suspense
         fallback={
           <div className="h-[50vh] flex items-center justify-center">

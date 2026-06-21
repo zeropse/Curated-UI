@@ -14,7 +14,7 @@ const interTight = Inter_Tight({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://ui.zeropse.me" || "http://localhost:3000"),
+  metadataBase: new URL("https://ui.zeropse.me"),
   title: {
     template: "%s | Curated UI",
     default: "Curated UI - All-in-One Design & UI Resources",

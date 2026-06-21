@@ -59,7 +59,6 @@ const MediaRenderer = memo(({ item, className, debug = false }) => {
         alt={item.alt || ""}
         draggable={false}
         fill
-        unoptimized={false}
         priority={true}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className={cn(

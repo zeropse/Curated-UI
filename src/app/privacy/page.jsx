@@ -72,7 +72,10 @@ const privacySections = [
 
 export default function PrivacyPage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-24 md:py-32 w-full mt-10">
+    <main
+      id="main-content"
+      className="max-w-4xl mx-auto px-4 py-24 md:py-32 w-full mt-10"
+    >
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-4xl md:text-5xl">Privacy Policy</CardTitle>

@@ -72,14 +72,14 @@ export function ExploreHeader() {
                 <TabsList className="flex flex-nowrap justify-start md:justify-center gap-1.5 md:gap-2 bg-transparent h-auto p-0 w-max mx-auto">
                   <TabsTrigger
                     value="grid"
-                    className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:bg-muted/50 motion-safe:hover:scale-105 motion-safe:active:scale-95"
                   >
                     <IconLayoutGrid size={18} />
                     Grid
                   </TabsTrigger>
                   <TabsTrigger
                     value="list"
-                    className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:bg-muted/50 motion-safe:hover:scale-105 motion-safe:active:scale-95"
                   >
                     <IconList size={18} />
                     List
@@ -101,7 +101,7 @@ export function ExploreHeader() {
                   <TabsTrigger
                     key={category}
                     value={category}
-                    className="px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="px-4 md:px-6 py-2 rounded-full font-medium transition-all text-sm whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:bg-muted/50 motion-safe:hover:scale-105 motion-safe:active:scale-95"
                   >
                     {category}
                   </TabsTrigger>

@@ -24,7 +24,7 @@ export function FloatingNav() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button asChild className="roundel-full">
+          <Button asChild className="rounded-full">
             <Link href="/explore">
               <IconCompass size={18} />
               Explore
