@@ -7,7 +7,7 @@ import { IconArrowUpRight } from "@tabler/icons-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
   Card,
-  CardContent,
+  CardHeader,
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
@@ -36,7 +36,7 @@ export function SiteCard({ site }) {
           animate-in fade-in zoom-in-95
           motion-safe:hover:-translate-y-2
           hover:border-primary/20
-          hover:shadow-[0px_16px_48px_rgba(0,0,0,0.06)]
+          hover:shadow-xl
           dark:hover:shadow-none
           flex
           flex-col
@@ -69,7 +69,7 @@ export function SiteCard({ site }) {
         </div>
 
         {/* Content Section Below Image */}
-        <CardContent className="px-4 py-5 flex flex-col gap-1.5 flex-grow border-0">
+        <CardHeader className="px-4 py-5 flex flex-col gap-1.5 flex-grow border-0">
           <div className="flex items-start justify-between gap-4 w-full">
             <CardTitle
               className="
@@ -117,7 +117,7 @@ export function SiteCard({ site }) {
           >
             {site.description}
           </CardDescription>
-        </CardContent>
+        </CardHeader>
       </Card>
     </Link>
   );
@@ -129,7 +129,7 @@ export function SiteCardSkeleton() {
       <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-muted/30">
         <Skeleton className="absolute inset-0 h-full w-full" />
       </div>
-      <CardContent className="px-4 py-5 flex flex-col gap-3 flex-grow border-0">
+      <CardHeader className="px-4 py-5 flex flex-col gap-3 flex-grow border-0">
         <div className="flex items-start justify-between gap-4 w-full">
           <Skeleton className="h-8 w-2/3" />
         </div>
@@ -137,7 +137,7 @@ export function SiteCardSkeleton() {
           <Skeleton className="h-4 w-full" />
           <Skeleton className="h-4 w-4/5" />
         </div>
-      </CardContent>
+      </CardHeader>
     </Card>
   );
 }

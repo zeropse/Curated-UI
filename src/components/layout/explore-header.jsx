@@ -97,7 +97,7 @@ export function ExploreHeader() {
 
           {/* View Toggle */}
           <div className="flex justify-center">
-            <div className="bg-background/80 backdrop-blur-xl p-2 rounded-[24px] md:rounded-full border border-border/40 shadow-[0px_8px_32px_rgba(0,0,0,0.04)] dark:shadow-none inline-flex">
+            <div className="bg-background/80 backdrop-blur-xl p-2 rounded-3xl md:rounded-full border border-border/40 shadow-lg dark:shadow-none inline-flex">
               <Tabs value={view} onValueChange={handleViewChange}>
                 <TabsList className="flex flex-nowrap justify-start md:justify-center gap-1.5 md:gap-2 bg-transparent h-auto p-0 w-max mx-auto">
                   <TabsTrigger
@@ -123,7 +123,7 @@ export function ExploreHeader() {
 
       {/* Sticky Categories */}
       <div className="sticky top-20 md:top-24 z-40 w-full flex justify-center mb-16 pt-4 pb-6 px-4 md:px-8">
-        <div className="bg-background/80 backdrop-blur-xl py-3 rounded-[24px] md:rounded-full px-3 border border-border/40 shadow-[0px_8px_32px_rgba(0,0,0,0.04)] dark:shadow-none w-full max-w-full md:w-auto">
+        <div className="bg-background/80 backdrop-blur-xl py-3 rounded-3xl md:rounded-full px-3 border border-border/40 shadow-lg dark:shadow-none w-full max-w-full md:w-auto">
           <ScrollArea className="w-full">
             <Tabs value={activeCategory} onValueChange={setActiveCategory}>
               <TabsList className="flex flex-nowrap justify-start md:justify-center gap-1.5 md:gap-2 bg-transparent h-auto p-0 w-max md:mx-auto">

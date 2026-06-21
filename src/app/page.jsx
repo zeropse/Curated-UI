@@ -54,7 +54,7 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="py-24 md:py-32 px-6 md:px-16 bg-neutral-950 text-white rounded-[40px] md:rounded-[80px] mt-12 mb-12 max-w-[1400px] mx-auto relative z-20"
+        className="py-24 md:py-32 px-6 md:px-16 bg-neutral-950 text-white rounded-4xl mt-12 mb-12 max-w-[1400px] mx-auto relative z-20"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Content */}
@@ -86,7 +86,7 @@ export default function Home() {
                   Browse Directory
                   <IconArrowRight
                     className="ml-2 motion-safe:group-hover:translate-x-1 transition-transform"
-                    size={20}
+                    data-icon="inline-end"
                     aria-hidden="true"
                   />
                 </Link>
