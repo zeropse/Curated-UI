@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 
+import { useTheme } from "next-themes";
+
 function polygonCollapsed(cx, cy, vertexCount) {
   const pairs = Array.from(
     { length: vertexCount },
@@ -119,6 +121,7 @@ export const ThemeToggle = ({
   onThemeChange,
   ...props
 }) => {
+  const { setTheme } = useTheme();
   const shape = variant ?? "circle";
   const isControlled = theme !== undefined;
   const [internalIsDark, setInternalIsDark] = useState(false);
@@ -176,6 +179,7 @@ export const ThemeToggle = ({
       } else {
         setInternalIsDark(newTheme);
         localStorage.setItem("theme", newTheme ? "dark" : "light");
+        setTheme(newTheme ? "dark" : "light");
       }
     };
 

@@ -21,6 +21,9 @@ export const metadata = {
   },
   description:
     "A curated collection of modern UI libraries, fonts, design systems, and inspiration for developers and designers.",
+  appleWebApp: {
+    title: "Curated UI",
+  },
   keywords: [
     "UI",
     "Design",

@@ -60,13 +60,13 @@ export function Footer() {
           <div className="col-span-2 flex flex-col items-center gap-4 text-center md:col-span-2 md:items-start md:pr-8 md:text-left">
             <Link
               href="/"
-              className="font-heading inline-flex items-center gap-2 rounded-sm text-3xl font-medium tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+              className="font-heading inline-flex items-center gap-1 rounded-sm text-3xl font-medium tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
               <Image
-                src="/favicon.ico"
+                src="/icon0.svg"
                 alt="Curated UI Logo"
-                width={28}
-                height={28}
+                width={50}
+                height={50}
                 className="rounded-sm"
               />
               <span>
