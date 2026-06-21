@@ -40,7 +40,7 @@ export default function FAQPage() {
     {
       question: "Do you rank or sponsor specific libraries?",
       answer:
-        "No. All resources are curated based on merit and quality. We do not accept paid placements to ensure the integrity of our curation.",
+        "No. All resources are curated based on merit and quality. We do not accept paid placements yet to ensure the integrity of our curation.",
     },
   ];
 

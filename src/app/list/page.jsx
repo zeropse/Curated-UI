@@ -105,13 +105,6 @@ export default function ListPage() {
       <Suspense fallback={<div className="h-[50vh]" />}>
         <ListContent />
       </Suspense>
-
-      {/* Background Ghost Text */}
-      <div className="fixed top-1/3 left-0 w-full overflow-hidden -z-0 pointer-events-none select-none flex justify-center opacity-[0.03] dark:opacity-5">
-        <span className="font-heading text-[20vw] font-bold tracking-tighter text-primary whitespace-nowrap">
-          DIRECTORY
-        </span>
-      </div>
     </main>
   );
 }
