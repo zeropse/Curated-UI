@@ -1,3 +1,11 @@
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+
 export const metadata = {
   title: "Privacy Policy - Curated UI",
   description: "Privacy Policy for Curated UI",
@@ -8,10 +16,10 @@ const privacySections = [
     title: "1. Introduction",
     content: (
       <>
-        Welcome to Curated UI ("we," "our," or "us"). We respect your privacy and are
-        deeply committed to protecting it. This Privacy Policy explains our
-        practices regarding the collection, use, and disclosure of information
-        that you may provide via our directory.
+        Welcome to Curated UI ("we," "our," or "us"). We respect your privacy
+        and are deeply committed to protecting it. This Privacy Policy explains
+        our practices regarding the collection, use, and disclosure of
+        information that you may provide via our directory.
       </>
     ),
   },
@@ -64,39 +72,38 @@ const privacySections = [
 
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen bg-background flex flex-col relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/5 to-transparent -z-10" />
+    <main className="max-w-4xl mx-auto px-4 py-24 md:py-32 w-full mt-10">
+      <Card>
+        <CardHeader className="text-center">
+          <CardTitle className="text-4xl md:text-5xl">Privacy Policy</CardTitle>
 
-      <div className="flex-grow pt-32 md:pt-40 pb-32 px-6 md:px-12 max-w-4xl mx-auto w-full z-10">
-        <div className="mb-16 text-center">
-          <h1 className="font-heading text-5xl md:text-6xl font-medium tracking-tight mb-6 text-primary">
-            Privacy Policy
-          </h1>
-
-          <p className="text-muted-foreground text-lg mb-2">
+          <CardDescription>
             Effective Date:{" "}
             {new Date().toLocaleDateString("en-US", {
               month: "long",
               day: "numeric",
               year: "numeric",
             })}
-          </p>
-        </div>
+          </CardDescription>
+        </CardHeader>
 
-        <div className="bg-white/5 border border-white/10 rounded-[32px] p-8 md:p-16 shadow-xl shadow-black/5 space-y-12">
-          {privacySections.map((section) => (
-            <section key={section.title} className="space-y-4">
-              <h2 className="font-heading text-3xl font-medium tracking-tight text-primary">
+        <CardContent className="space-y-8">
+          {privacySections.map((section, index) => (
+            <section
+              key={section.title}
+              className={index !== 0 ? "border-t pt-8" : ""}
+            >
+              <h2 className="text-xl font-semibold tracking-tight mb-3">
                 {section.title}
               </h2>
 
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-muted-foreground leading-7">
                 {section.content}
               </p>
             </section>
           ))}
-        </div>
-      </div>
+        </CardContent>
+      </Card>
     </main>
   );
 }

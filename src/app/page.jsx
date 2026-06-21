@@ -22,7 +22,7 @@ const features = [
 
 export default function Home() {
   return (
-    <main id="main-content" className="min-h-screen relative bg-background">
+    <main id="main-content" className="min-h-screen relative">
       {/* Hero Section */}
       <section className="relative h-[100dvh] flex flex-col items-center justify-between pt-28 pb-8 px-6 md:px-12 max-w-[1400px] mx-auto z-10 overflow-hidden">
         <div className="flex-1 flex flex-col justify-center w-full items-center">

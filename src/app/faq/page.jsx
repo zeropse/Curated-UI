@@ -4,6 +4,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 export const metadata = {
   title: "FAQ - Curated UI",
@@ -45,22 +52,19 @@ export default function FAQPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-background flex flex-col relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/5 to-transparent -z-10" />
-
-      <div className="flex-grow pt-32 md:pt-40 pb-32 px-6 md:px-12 max-w-4xl mx-auto w-full z-10">
-        <div className="text-center mb-16">
-          <h1 className="font-heading text-5xl md:text-6xl font-medium tracking-tight mb-6 text-primary">
+    <main className="max-w-4xl mx-auto px-4 py-24 md:py-32 w-full mt-10">
+      <Card>
+        <CardHeader className="text-center">
+          <CardTitle className="text-4xl md:text-5xl">
             Frequently Asked Questions
-          </h1>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          </CardTitle>
+          <CardDescription className="text-base md:text-lg max-w-2xl mx-auto mt-4">
             Everything you need to know about how we curate, update, and manage
             the directory.
-          </p>
-        </div>
+          </CardDescription>
+        </CardHeader>
 
-        <div className="bg-white/5 border border-white/10 rounded-[32px] p-6 md:p-12 shadow-xl shadow-black/5">
+        <CardContent className="pt-6">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem
@@ -77,8 +81,8 @@ export default function FAQPage() {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
     </main>
   );
 }
