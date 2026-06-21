@@ -116,7 +116,6 @@ export const ThemeToggle = ({
   className,
   duration = 400,
   variant,
-  fromCenter = false,
   theme,
   onThemeChange,
   ...props
@@ -153,16 +152,9 @@ export const ThemeToggle = ({
     const viewportWidth = window.visualViewport?.width ?? window.innerWidth;
     const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
 
-    let x;
-    let y;
-    if (fromCenter) {
-      x = viewportWidth / 2;
-      y = viewportHeight / 2;
-    } else {
-      const { top, left, width, height } = button.getBoundingClientRect();
-      x = left + width / 2;
-      y = top + height / 2;
-    }
+    const { top, left, width, height } = button.getBoundingClientRect();
+    const x = left + width / 2;
+    const y = top + height / 2;
 
     const maxRadius = Math.hypot(
       Math.max(x, viewportWidth - x),
@@ -238,7 +230,7 @@ export const ThemeToggle = ({
         );
       });
     }
-  }, [shape, fromCenter, duration, isDark, isControlled, onThemeChange]);
+  }, [shape, duration, isDark, isControlled, onThemeChange]);
 
   return (
     <Button

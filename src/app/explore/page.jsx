@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { ExploreContent } from "./explore-content";
-import { SiteCardSkeleton } from "@/components/ui/site-card";
+import { SiteCardSkeleton } from "@/components/site-card";
 
 export const metadata = {
   title: "Explore",

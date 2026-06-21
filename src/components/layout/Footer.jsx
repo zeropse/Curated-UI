@@ -93,7 +93,7 @@ export function Footer() {
                     href={link.href}
                     className={`${linkClass} flex items-center gap-2 hover:underline`}
                   >
-                    <link.icon size={16} />
+                    <link.icon size={16} aria-hidden="true" />
                     {link.name}
                   </Link>
                 </li>
@@ -115,9 +115,9 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className={`${linkClass} flex items-center gap-2 hover:underline`}
                   >
-                    <link.icon size={16} />
+                    <link.icon size={16} aria-hidden="true" />
                     {link.name}
-                    <IconArrowUpRight size={16} />
+                    <IconArrowUpRight size={16} aria-hidden="true" />
                   </Link>
                 </li>
               ))}
@@ -139,7 +139,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 rounded-sm text-sm text-stone-100 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
               >
-                <link.icon size={16} />
+                <link.icon size={16} aria-hidden="true" />
                 {link.name}
               </Link>
             ))}

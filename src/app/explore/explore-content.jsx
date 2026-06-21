@@ -1,9 +1,17 @@
 "use client";
 
-import { SiteCard } from "@/components/ui/site-card";
+import { SiteCard } from "@/components/site-card";
 import { sites } from "@/data/sites";
 import { useQueryState } from "nuqs";
 import { ExploreHeader } from "@/components/layout/explore-header";
+import {
+  Empty,
+  EmptyHeader,
+  EmptyTitle,
+  EmptyDescription,
+  EmptyMedia,
+} from "@/components/ui/empty";
+import { IconSearch } from "@tabler/icons-react";
 
 export function ExploreContent() {
   const [activeCategory] = useQueryState("category", {
@@ -33,14 +41,17 @@ export function ExploreContent() {
 
       <section className="px-6 md:px-12 max-w-[1400px] mx-auto relative z-10 min-h-[50vh]">
         {filteredSites.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-32 text-center">
-            <h3 className="font-heading text-2xl font-medium text-primary mb-4">
-              No sites found
-            </h3>
-            <p className="text-muted-foreground">
-              Try adjusting your search or selecting a different category.
-            </p>
-          </div>
+          <Empty className="py-32 border-none">
+            <EmptyMedia variant="icon" className="size-16 rounded-2xl mb-2">
+              <IconSearch className="size-8" />
+            </EmptyMedia>
+            <EmptyHeader>
+              <EmptyTitle className="text-xl">No sites found</EmptyTitle>
+              <EmptyDescription>
+                Try adjusting your search or selecting a different category.
+              </EmptyDescription>
+            </EmptyHeader>
+          </Empty>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-x-12 md:gap-y-16 justify-items-center">
             {filteredSites.map((site) => (
