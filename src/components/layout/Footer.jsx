@@ -81,13 +81,13 @@ export function Footer() {
             >
               <Image
                 src="/favicon.ico"
-                alt="Dir Logo"
+                alt="Curated UI Logo"
                 width={28}
                 height={28}
                 className="rounded-sm"
               />
               <span>
-                Dir<span className="text-[#F37338]">.</span>
+                Curated<span className="text-[#F37338]"> UI</span>
               </span>
             </Link>
 
@@ -162,7 +162,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/20 pt-8 md:flex-row">
           <p className="text-sm text-[#F3F0EE]">
-            © {year} UI Directory. All rights reserved.
+            © {year} Curated UI. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4">

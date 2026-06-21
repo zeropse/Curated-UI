@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Privacy Policy - UI Directory",
-  description: "Privacy Policy for UI Directory",
+  title: "Privacy Policy - Curated UI",
+  description: "Privacy Policy for Curated UI",
 };
 
 const privacySections = [
@@ -8,7 +8,7 @@ const privacySections = [
     title: "1. Introduction",
     content: (
       <>
-        Welcome to Dir. ("we," "our," or "us"). We respect your privacy and are
+        Welcome to Curated UI ("we," "our," or "us"). We respect your privacy and are
         deeply committed to protecting it. This Privacy Policy explains our
         practices regarding the collection, use, and disclosure of information
         that you may provide via our directory.

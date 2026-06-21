@@ -6,16 +6,16 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata = {
-  title: "FAQ - UI Directory",
+  title: "FAQ - Curated UI",
   description: "Frequently Asked Questions",
 };
 
 export default function FAQPage() {
   const faqs = [
     {
-      question: "What is Dir. and who is it for?",
+      question: "What is Curated UI and who is it for?",
       answer:
-        "Dir. is a meticulously curated directory of modern UI components, libraries, design systems, and web tools. It is built for developers and designers who want to stop endlessly bookmarking scattered resources and start building exceptional products faster.",
+        "Curated UI is a meticulously curated directory of modern UI components, libraries, design systems, and web tools. It is built for developers and designers who want to stop endlessly bookmarking scattered resources and start building exceptional products faster.",
     },
     {
       question: "How do you select the libraries that get listed?",
@@ -30,7 +30,7 @@ export default function FAQPage() {
     {
       question: "Is this directory free to use?",
       answer:
-        "Yes, Dir. is completely free and open-source. We believe in keeping high-quality design resources accessible to everyone.",
+        "Yes, Curated UI is completely free and open-source. We believe in keeping high-quality design resources accessible to everyone.",
     },
     {
       question: "How often do you add new resources?",

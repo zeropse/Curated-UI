@@ -13,12 +13,12 @@ export function FloatingNav() {
         >
           <Image
             src="/favicon.ico"
-            alt="Dir Logo"
+            alt="Curated UI Logo"
             width={20}
             height={20}
             className="rounded-sm"
           />
-          Dir<span className="text-[#F37338]">.</span>
+          Curated<span className="text-[#F37338]"> UI</span>
         </Link>
 
         <div className="flex items-center gap-2">

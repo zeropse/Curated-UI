@@ -1,23 +1,23 @@
 export const metadata = {
-  title: "Terms of Service - UI Directory",
-  description: "Terms of Service for UI Directory",
+  title: "Terms of Service - Curated UI",
+  description: "Terms of Service for Curated UI",
 };
 
 const termsSections = [
   {
     title: "1. Agreement to Terms",
     content:
-      'By accessing or using Dir. (the "Directory"), you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access the service.',
+      'By accessing or using Curated UI (the "Directory"), you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access the service.',
   },
   {
     title: "2. Use of the Directory",
     content:
-      "Dir. is provided as a free, curated resource for developers and designers. You may use the directory to discover, explore, and navigate to third-party tools and libraries. You agree not to use the directory for any unlawful purpose or in any way that could damage, disable, or impair the service.",
+      "Curated UI is provided as a free, curated resource for developers and designers. You may use the directory to discover, explore, and navigate to third-party tools and libraries. You agree not to use the directory for any unlawful purpose or in any way that could damage, disable, or impair the service.",
   },
   {
     title: "3. Intellectual Property",
     content:
-      "The curation, layout, design, and original content of Dir. are protected by intellectual property rights. However, all third-party logos, trademarks, library names, and website screenshots belong to their respective owners. We do not claim ownership over the external resources we link to.",
+      "The curation, layout, design, and original content of Curated UI are protected by intellectual property rights. However, all third-party logos, trademarks, library names, and website screenshots belong to their respective owners. We do not claim ownership over the external resources we link to.",
   },
   {
     title: "4. Disclaimer of Warranties",
@@ -27,7 +27,7 @@ const termsSections = [
   {
     title: "5. Limitation of Liability",
     content:
-      "In no event shall Dir., its creators, or contributors be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the directory, or from any third-party tools you discover through the directory.",
+      "In no event shall Curated UI, its creators, or contributors be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the directory, or from any third-party tools you discover through the directory.",
   },
   {
     title: "6. Changes to Terms",

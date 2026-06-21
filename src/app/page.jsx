@@ -27,8 +27,12 @@ export default function Home() {
       <section className="relative h-[100dvh] flex flex-col items-center justify-between pt-28 pb-8 px-6 md:px-12 max-w-[1400px] mx-auto z-10 overflow-hidden">
         <div className="flex-1 flex flex-col justify-center w-full items-center">
           <Badge className="mb-6 py-1.5 px-4 rounded-full border-primary/20 bg-primary/5 text-primary gap-1.5 animate-fade-in">
-            <IconSparkles size={14} className="text-[#F37338]" aria-hidden="true" />
-            <span>The Modern UI Directory</span>
+            <IconSparkles
+              size={14}
+              className="text-[#F37338]"
+              aria-hidden="true"
+            />
+            <span>Modern UI Directory</span>
           </Badge>
 
           <div className="text-center mb-8 md:mb-12">
@@ -56,7 +60,7 @@ export default function Home() {
           {/* Left Content */}
           <div className="space-y-8">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">
-              Why Dir<span className="text-[#F37338]">.</span> exists.
+              Why Curated<span className="text-[#F37338]"> UI</span> exists.
             </h2>
 
             <div className="space-y-6 text-lg md:text-xl text-[#F3F0EE]/80 leading-relaxed">
@@ -66,9 +70,9 @@ export default function Home() {
               </p>
 
               <p>
-                Dir. is a continually updated, meticulously curated directory of
-                tools, libraries, and design inspiration to help you build
-                exceptional products faster.
+                Curated UI is a continually updated, meticulously curated
+                directory of tools, libraries, and design inspiration to help
+                you build exceptional products faster.
               </p>
             </div>
 

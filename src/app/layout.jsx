@@ -14,9 +14,41 @@ const interTight = Inter_Tight({
 });
 
 export const metadata = {
-  title: "All-in-One Design & UI Resources Directory",
+  metadataBase: new URL("https://ui.zeropse.me" || "http://localhost:3000"),
+  title: {
+    template: "%s | Curated UI",
+    default: "Curated UI - All-in-One Design & UI Resources",
+  },
   description:
     "A curated collection of modern UI libraries, fonts, design systems, and inspiration for developers and designers.",
+  keywords: [
+    "UI",
+    "Design",
+    "Resources",
+    "Directory",
+    "Tailwind CSS",
+    "React",
+    "Next.js",
+    "Components",
+    "Curated UI",
+  ],
+  authors: [{ name: "Curated UI" }],
+  creator: "Curated UI",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    title: "Curated UI - All-in-One Design & UI Resources",
+    description:
+      "A curated collection of modern UI libraries, fonts, design systems, and inspiration for developers and designers.",
+    siteName: "Curated UI",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Curated UI - All-in-One Design & UI Resources",
+    description:
+      "A curated collection of modern UI libraries, fonts, design systems, and inspiration for developers and designers.",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -40,6 +72,12 @@ export default function RootLayout({ children }) {
             >
               Skip to main content
             </a>
+            {/* Ghost Website Name in Background */}
+            <div className="fixed inset-0 pointer-events-none -z-10 flex items-center justify-center overflow-hidden">
+              <span className="font-heading text-[15vw] md:text-[20vw] font-bold text-primary opacity-[0.02] dark:opacity-[0.03] select-none whitespace-nowrap tracking-tighter">
+                CURATED UI.
+              </span>
+            </div>
             <FloatingNav />
             {children}
             <Footer />

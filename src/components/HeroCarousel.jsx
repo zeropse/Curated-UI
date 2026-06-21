@@ -1,12 +1,12 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { IconBug, IconBugOff } from "@tabler/icons-react";
 import BoxCarousel from "@/components/ui/box-carousel";
 import useScreenSize from "@/hooks/use-screen-size";
 import { sites } from "@/lib/data";
+/* import { IconBug, IconBugOff } from "@tabler/icons-react"; */
 
-const carouselItems = sites.slice(0, 10).map((site, index) => ({
+const carouselItems = sites.map((site, index) => ({
   id: String(index + 1),
   type: "image",
   src: `https://api.microlink.io/?url=${encodeURIComponent(site.url)}&screenshot=true&meta=false&embed=screenshot.url`,
@@ -34,7 +34,7 @@ export function HeroCarousel() {
 
   return (
     <div className="relative w-full max-w-4xl mx-auto flex flex-col items-center justify-center">
-      <button
+      {/* <button
         onClick={toggleDebug}
         className="absolute -top-12 right-0 p-2 text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-md"
         title={debug ? "Debug Mode: ON" : "Debug Mode: OFF"}
@@ -46,7 +46,7 @@ export function HeroCarousel() {
         ) : (
           <IconBugOff size={20} aria-hidden="true" />
         )}
-      </button>
+      </button> */}
 
       <div className="flex justify-center shrink-0">
         <BoxCarousel
@@ -56,7 +56,7 @@ export function HeroCarousel() {
           height={height}
           direction="left"
           autoPlay
-          autoPlayInterval={3000}
+          autoPlayInterval={1000}
           debug={debug}
           enableDrag
           perspective={1200}
