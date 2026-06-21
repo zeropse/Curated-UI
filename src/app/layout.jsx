@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingNav } from "@/components/layout/FloatingNav";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const interTight = Inter_Tight({
@@ -92,6 +93,7 @@ export default function RootLayout({ children }) {
             <FloatingNav />
             {children}
             <Footer />
+            <ScrollToTop />
           </NuqsAdapter>
         </ThemeProvider>
       </body>

@@ -2,8 +2,13 @@
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import {
+  InputGroup,
+  InputGroupInput,
+  InputGroupAddon,
+  InputGroupText,
+  InputGroupButton,
+} from "@/components/ui/input-group";
 import { categories } from "@/data/categories";
 import { useQueryState } from "nuqs";
 import {
@@ -63,39 +68,39 @@ export function ExploreHeader() {
             Explore the Directory
           </h1>
 
-          <div className="max-w-xl mx-auto relative mb-8 group">
-            <IconSearch
-              className="absolute left-6 top-1/2 -translate-y-1/2 size-5 text-muted-foreground pointer-events-none"
-              aria-hidden="true"
-            />
-            <Input
-              ref={inputRef}
-              id="search"
-              name="search"
-              type="text"
-              placeholder="Search for UI, libraries, fonts…"
-              aria-label="Search directory"
-              value={searchQuery || ""}
-              onChange={(e) => setSearchQuery(e.target.value || null)}
-              className="w-full pl-14 pr-14 h-14 md:h-16 rounded-full border border-primary/20 bg-background text-lg text-primary placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-primary/20 transition-all shadow-sm"
-            />
-            {searchQuery ? (
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setSearchQuery(null)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-destructive hover:bg-transparent focus-visible:ring-2 focus-visible:ring-ring h-8 w-8 rounded-full"
-                aria-label="Clear search"
-              >
-                <IconX size={20} aria-hidden="true" />
-              </Button>
-            ) : (
-              <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none hidden md:flex items-center gap-1 opacity-50">
-                <kbd className="pointer-events-none inline-flex h-5 items-center gap-1 rounded border border-primary/20 bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-                  <span className="text-xs">⌘</span>K
-                </kbd>
-              </div>
-            )}
+          {/* Search Bar */}
+          <div className="max-w-xl mx-auto mb-8">
+            <InputGroup className="h-14 rounded-full bg-white shadow-sm hover:border-neutral-300 transition-all duration-300 [&:has(input:focus-visible)]:border-primary [&:has(input:focus-visible)]:ring-primary">
+              <InputGroupAddon align="inline-start" className="pl-4 pr-1">
+                <InputGroupText>
+                  <IconSearch className="text-muted-foreground group-focus-within/input-group:text-primary transition-colors" />
+                </InputGroupText>
+              </InputGroupAddon>
+
+              <InputGroupInput
+                ref={inputRef}
+                type="text"
+                placeholder="Search components, templates, animations... (Ctrl+K)"
+                className="text-base placeholder:text-neutral-400"
+                value={searchQuery || ""}
+                onChange={(e) => setSearchQuery(e.target.value || null)}
+              />
+
+              <InputGroupAddon align="inline-end" className="pr-4">
+                {searchQuery && (
+                  <InputGroupButton
+                    variant="ghost"
+                    className="size-8 p-0 text-neutral-400 hover:text-destructive rounded-full hover:bg-neutral-100 transition-colors"
+                    onClick={() => {
+                      setSearchQuery(null);
+                      inputRef.current?.focus();
+                    }}
+                  >
+                    <IconX size={16} />
+                  </InputGroupButton>
+                )}
+              </InputGroupAddon>
+            </InputGroup>
           </div>
 
           {/* View Toggle */}
