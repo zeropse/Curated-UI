@@ -30,12 +30,13 @@ body:
       description: Select the category that best fits this resource.
       options:
         - UI Components
-        - Design Systems
-        - Resources & Tools
-        - Typography
-        - Animation
+        - Templates & Blocks
+        - Tools & Utilities
         - Inspiration
-        - Media
+        - Typography & Colors
+        - Icons & Illustrations
+        - Media & Sounds
+        - Animations
     validations:
       required: true
   - type: textarea
