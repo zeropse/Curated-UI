@@ -32,7 +32,7 @@ async function main() {
     try {
       await page.goto(site.url, { waitUntil: "networkidle2", timeout: 30000 });
       // Wait a bit for entrance animations to finish
-      await new Promise((r) => setTimeout(r, 5000));
+      await new Promise((r) => setTimeout(r, 2000));
       await page.screenshot({ path: dest, type: "jpeg", quality: 85 });
       console.log(`    Saved to ${dest}`);
     } catch (err) {
