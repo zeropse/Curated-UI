@@ -41,7 +41,7 @@ const contributeLinks = [
 const socialLinks = [
   {
     name: "GitHub",
-    href: "https://github.com/zeropse/Curated-UI",
+    href: "https://github.com/zeropse/curated-ui",
     icon: IconBrandGithub,
   },
   { name: "Twitter", href: "https://x.com/zer0pse", icon: IconBrandX },
@@ -60,8 +60,7 @@ export function Footer() {
           <div className="col-span-2 flex flex-col items-center gap-4 text-center md:col-span-2 md:items-start md:pr-8 md:text-left">
             <Link
               href="/"
-              className="font-heading inline-flex items-center gap-1 rounded-sm text-3xl font-medium tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-            >
+              className="font-heading inline-flex items-center gap-1 rounded-sm text-3xl font-medium tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50">
               <Image
                 src="/icon0.svg"
                 alt="Curated UI Logo"
@@ -91,8 +90,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className={`${linkClass} flex items-center gap-2 hover:underline`}
-                  >
+                    className={`${linkClass} flex items-center gap-2 hover:underline`}>
                     <link.icon size={16} aria-hidden="true" />
                     {link.name}
                   </Link>
@@ -113,8 +111,7 @@ export function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${linkClass} flex items-center gap-2 hover:underline`}
-                  >
+                    className={`${linkClass} flex items-center gap-2 hover:underline`}>
                     <link.icon size={16} aria-hidden="true" />
                     {link.name}
                     <IconArrowUpRight size={16} aria-hidden="true" />
@@ -137,8 +134,7 @@ export function Footer() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 rounded-sm text-sm text-stone-100 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-              >
+                className="flex items-center gap-1.5 rounded-sm text-sm text-stone-100 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50">
                 <link.icon size={16} aria-hidden="true" />
                 {link.name}
               </Link>
