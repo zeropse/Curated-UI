@@ -296,4 +296,42 @@ export const sites = [
     description: "Pixel-perfect, uniquely crafted React components.",
     imageSlug: "chanh-dai",
   },
+  {
+    name: "KairoUI",
+    url: "https://www.kairoui.online/",
+    category: "Templates & Blocks",
+    description: "Free, MIT-licensed Next.js 16 templates and landing pages.",
+    imageSlug: "kairoui",
+  },
+  {
+    name: "Vengence UI",
+    url: "https://www.vengenceui.com/",
+    category: "Animations",
+    description:
+      "Animated React components and next-generation UI interactions.",
+    imageSlug: "vengence-ui",
+  },
+  {
+    name: "Groot Studio",
+    url: "https://grootstudio.dev/",
+    category: "UI Components",
+    description: "High-performing, SEO optimised UI components and blocks.",
+    imageSlug: "groot-studio",
+  },
+  {
+    name: "beUI",
+    url: "https://beui.dev/",
+    category: "Animations",
+    description:
+      "Free, open-source, shadcn-compatible motion components for React.",
+    imageSlug: "beui",
+  },
+  {
+    name: "Watermelon UI",
+    url: "https://ui.watermelon.sh/",
+    category: "UI Components",
+    description:
+      "600+ High-quality React components, dashboards, and UI blocks.",
+    imageSlug: "watermelon-ui",
+  },
 ];
